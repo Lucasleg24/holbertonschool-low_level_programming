@@ -9,5 +9,5 @@
 int main(void)
 {
 	sizeof(int);
-		return (0);
+	return (0);
 }
