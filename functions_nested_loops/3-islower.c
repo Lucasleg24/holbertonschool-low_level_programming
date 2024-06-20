@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * islower - check minuscule
- *
+ * _islower - check lowercase
+ * @c: caracter to be verified
  * Return: 0 or 1
  */
 
 int _islower(int c)
 {
 
-	if ( c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (1);
 	else
 		return (0);
