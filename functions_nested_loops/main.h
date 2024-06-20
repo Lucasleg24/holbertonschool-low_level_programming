@@ -1,6 +1,7 @@
-#ifndef fonctions
-#define fonctions
+#ifndef MAIN_H
+#define MAIN_H
 
+int _putchar(char c);
 int main(void);
 
 #endif
