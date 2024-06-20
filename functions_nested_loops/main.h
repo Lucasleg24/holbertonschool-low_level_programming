@@ -1,3 +1,6 @@
-#include <unistd.h>
+#ifndef fonctions
+#define fonctions
 
-int _putchar(char c)
+int main(void);
+
+#endif
