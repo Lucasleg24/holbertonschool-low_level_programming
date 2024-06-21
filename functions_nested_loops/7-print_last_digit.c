@@ -6,9 +6,9 @@
  * Return: always 0
  */
 
-int print_last_digit(int a)
+int print_last_digit(int r)
 {
-	_putchar(a % 10);
+	_putchar(r % 10);
 	_putchar('\n');
 	return (0);
 }
