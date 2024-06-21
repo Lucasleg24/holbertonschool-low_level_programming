@@ -2,18 +2,14 @@
 
 /**
  * add - add two integer
- * @a: integer a
- * @b: integer b
- * Return: always 0
+ * @a: number 1
+ * @b: number 2
+ * Return: always result
  */
 
 int add(int a, int b)
 {
-	int sum;
+	int result = a + b;
 
-	sum = a + b;
-
-	_putchar(sum);
-
-	return (0);
+	return (result);
 }
