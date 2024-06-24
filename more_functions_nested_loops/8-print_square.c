@@ -2,7 +2,7 @@
 
 /**
  *print_square - print a square
- *
+ * @size: variable
  * Return: 0
  */
 
