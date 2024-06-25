@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - attribut une valeur
- * @*n: variable pointing
+ * @n: variable pointing
  * Return: 0
  */
 
