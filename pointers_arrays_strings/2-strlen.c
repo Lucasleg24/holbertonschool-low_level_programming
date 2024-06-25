@@ -1,12 +1,20 @@
 #include "main.h"
 
 /**
- * _strlen - size string
+ * _strlen - string
  * @s: variable
- * Return: 0
+ * Return: return c
  */
 
 int _strlen(char *s)
 {
-	return (_strlen(s));
+	int c;
+
+	c = 0;
+
+	while (s[c] != '\0')
+	{
+	c++;
+	}
+	return (c);
 }
