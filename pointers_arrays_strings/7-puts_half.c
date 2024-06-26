@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	while (i < _strlen(str))
 	{
-		if (str[i] >= '5')
+		if (i > (_strlen(str) - 1) / 2)
 		{
 			_putchar(str[i]);
 			i++;
