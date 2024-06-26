@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
  * puts2 - puts 1 in 2
@@ -10,7 +11,7 @@ void puts2(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (i < _strlen(str))
 	{
 		_putchar(str[i]);
 		i = i + 2;
