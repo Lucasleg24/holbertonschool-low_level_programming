@@ -5,7 +5,6 @@
  * print_diagsums _ arithmetics
  * @a: array
  * @size: limit array
- * Return: 0
  */
 
 void print_diagsums(int *a, int size)
