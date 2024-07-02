@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_diagsums _ arithmetics
- * @a: array
+ * print_diagsums - arithmetics
+ * @a: pointer c3 c5
  * @size: limit array
  */
 
