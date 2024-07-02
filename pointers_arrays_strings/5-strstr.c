@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * *_strstr - compare string
@@ -18,16 +19,23 @@ char *_strstr(char *haystack, char *needle)
 			haystack++;
 		}
 		if (*haystack == *needle)
-			{
-				while (haystack[i] != '\0' && needle[i] != '\0')
+		{
+				while (haystack[i] == needle[i])
 				{
 					i++;
+					if (haystack[i] != needle[i])
+					{
+						haystack++;
+						break;
+					}
 				}
 				if (needle[i] == '\0')
 				{
 					return (haystack);
 				}
-			}
+				else
+					break;
+		}
 	}
 	return ('\0');
 }
