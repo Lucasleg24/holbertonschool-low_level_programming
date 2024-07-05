@@ -11,17 +11,7 @@ int main(int argc, char *argv[])
 {
 	int count;
 
-	printf("%d\n", argc);
-	if (argc > 1)
-	{
-		for (count = 1; ount < argc; count++)
+	for (count = 0; argv[count]; count++)
 	{
 	}
-	}
-	else
-	{
-		return (0);
-	}
-
-	return (0);
-}
+	printf("%d\n", count)
