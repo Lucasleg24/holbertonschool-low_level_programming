@@ -32,26 +32,20 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	sum = sum + l1 + l2 + 1;
-
 	t = malloc(sizeof(char) * sum);
-
 	if (t == 0)
 	{
 		return (NULL);
 	}
-	l1 = 0;
-	l2 = 0;
-	while (s1[l1] != '\0')
+	for (l1 = 0; s1[l1] != '\0'; l1++)
 	{
 		t[i] = s1[l1];
 		i++;
-		l1++;
 	}
-	while (s2[l2] != '\0')
+	for (l2 = 0; s2[l2] != '\0'; l2++)
 	{
 		t[i] = s2[l2];
 		i++;
-		l2++;
 	}
 	t[i + 1] = '\0';
 	return (t);
