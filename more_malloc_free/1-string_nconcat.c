@@ -41,9 +41,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		t[i] = s1[l1];
 		i++;
 	}
-	for (l2 = 0; l2 < n; l2++)
+	for (cal = 0; cal < l2; cal++)
 	{
-		t[i] = s2[l2];
+		t[i] = s2[cal];
 		i++;
 	}
 	t[i + 1] = '\0';
