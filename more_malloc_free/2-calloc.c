@@ -3,9 +3,29 @@
 #include <stdlib.h>
 
 /**
- *
- *
+ * *_calloc - allocation memory initialised 0
+ * @nmemb: number varaible
+ * @size: size varaible
+ * Return: 0 or NULL
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	void *t;
+	unsigned int i;
+
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+	t = malloc(sizeof(size) * nmemb);
+	if (t == 0)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < nmemb; i++)
+	{
+		t[i] = 0;
+	}
+	return (t);
+}
