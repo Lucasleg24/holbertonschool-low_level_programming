@@ -27,6 +27,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 	}
 	for (cal = 0; s2[cal] != '\0'; cal++)
+	{
+	}
 	l2 = n >= cal ? cal : n;
 	sum = l1 + l2 + 1;
 	t = malloc(sizeof(char) * sum);
