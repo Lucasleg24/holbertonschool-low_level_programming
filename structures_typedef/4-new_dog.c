@@ -48,7 +48,7 @@ char *_strdup(char *str)
 	char *t;
 	int i = 0;
 	int l;
-	
+
 	if (str == NULL)
 	{
 		return (NULL);
@@ -57,9 +57,9 @@ char *_strdup(char *str)
 	{
 	}
 	l++;
-	
+
 	t = malloc(sizeof(char) * l);
-	
+
 	if (t == 0)
 	{
 		return (NULL);
