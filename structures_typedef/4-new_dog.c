@@ -1,7 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
-char *_strdup(char *str);
 
 /**
  * *new_dog - copy the dog
