@@ -15,11 +15,13 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	if (size <= 0)
 		return (-1);
-	while (i < size)
+	while (i <= size)
 	{
 		result = cmp(*array);
 		if (result != 0)
 			break;
+		if (i == size)
+			return (-1);
 		i++;
 		array++;
 	}
