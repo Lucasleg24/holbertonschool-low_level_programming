@@ -1,8 +1,8 @@
+#ifndef HEADER_FILE
+#define HEADER_FILE
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef HEADER_FILE
-#define HEADER_FILE
 
 int _putchar(char c);
 void print_name(char *name, void (*f)(char *));
