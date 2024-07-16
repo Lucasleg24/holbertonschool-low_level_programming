@@ -12,7 +12,7 @@
 int op_add(int a, int b)
 {
 	int result;
-	
+
 	result = a + b;
 	return (result);
 }
@@ -43,7 +43,7 @@ int op_mul(int a, int b)
 {
 	int result;
 
-	result a * b;
+	result = a * b;
 	return (result);
 }
 
