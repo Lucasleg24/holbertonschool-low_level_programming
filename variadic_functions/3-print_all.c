@@ -15,8 +15,9 @@ void print_int(void)
  * Return: void
  */
 
-void print_char(void)
+void print_char(va_list org)
 {
+	char i = va_list(org, char);
 	printf("Print char");
 }
 
@@ -60,7 +61,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(va_list)
+	va_start(org)
 	while (format[o] != '\0')
 	{
 		if (format[o] == 'c' || format[o] == 'i' ||
@@ -70,7 +71,7 @@ void print_all(const char * const format, ...)
 			{
 				if (list[p].check == format[o])
 				{
-					list[p].f(va_list);
+					list[p].f(org);
 				}
 				p++;
 			}
