@@ -1,4 +1,4 @@
-#include "variadic_functions"
+#include "variadic_functions.h"
 
 /**
  * print_int - print an int
@@ -48,12 +48,22 @@ void print_float(void)
 
 void print_all(const char * const format, ...)
 {
-	char c;
-	int i;
-	float f;
-	char *s;
-	char *p = 0;
+	int p = 0;
 
-	while (format[p] != NULL)
+	formule list[] = {
+		{"c", print_char}
+		{"i", print_int}
+		{"s", print_string}
+		{"f", print_float}
+		{NULL, NULL}
+	};
+
+	while (list[p].check != NULL)
 	{
-		if (format[p] == 'c' || format[p] == 'i' || format[p] == 'f' || format[p] == 's')
+		if (list[p].check == 'c' || list[p].check == 'i' || list[p].check == 'f' || list[p].check == 's')
+		{
+			list[p].f;
+		}
+	p++;
+	}
+}
