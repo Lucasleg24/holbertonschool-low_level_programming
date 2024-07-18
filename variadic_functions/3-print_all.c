@@ -7,7 +7,7 @@
 
 void print_int(void)
 {
-	printf("%d");
+	printf("Print integer");
 }
 
 /**
@@ -17,7 +17,7 @@ void print_int(void)
 
 void print_char(void)
 {
-	printf("%c");
+	printf("Print char");
 }
 
 /**
@@ -27,7 +27,7 @@ void print_char(void)
 
 void print_string(void)
 {
-	printf("%s");
+	printf("Print string");
 }
 
 /**
@@ -37,7 +37,7 @@ void print_string(void)
 
 void print_float(void)
 {
-	printf("%f");
+	printf("Print float");
 }
 
 /**
@@ -49,6 +49,8 @@ void print_float(void)
 void print_all(const char * const format, ...)
 {
 	int p = 0;
+	int o = 0;
+	va_list org;
 
 	formule list[] = {
 		{"c", print_char}
@@ -58,12 +60,22 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	while (list[p].check != NULL)
+	va_start(va_list)
+	while (format[o] != '\0')
 	{
-		if (list[p].check == 'c' || list[p].check == 'i' || list[p].check == 'f' || list[p].check == 's')
+		if (format[o] == 'c' || format[o] == 'i' ||
+				format[o] == 'f' || format[o] == 's')
 		{
-			list[p].f;
+			while (list[p].check != NULL)
+			{
+				if (list[p].check == format[o])
+				{
+					list[p].f(va_list);
+				}
+				p++;
+			}
 		}
-	p++;
+		o++;
 	}
+	va_end(org);
 }
