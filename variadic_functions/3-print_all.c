@@ -93,6 +93,7 @@ void print_all(const char * const format, ...)
 			}
 		}
 		o++;
+		p = 0;
 	}
 	printf("\n");
 	va_end(org);
