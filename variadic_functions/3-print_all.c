@@ -41,6 +41,7 @@ void print_string(va_list org)
 	if (i == NULL)
 	{
 		printf("(nil)");
+	}
 
 	printf("%s", i);
 
@@ -71,6 +72,7 @@ void print_all(const char * const format, ...)
 	int p = 0;
 	int o = 0;
 	va_list org;
+	char *sep = "";
 
 	formule list[] = {
 		{"c", print_char},
@@ -87,8 +89,9 @@ void print_all(const char * const format, ...)
 		{
 			if (*(list[p].check) == format[o])
 			{
+				printf("%s", sep);
+				sep = ", ";
 				list[p].f(org);
-				printf(", ");
 			}
 			p++;
 		}
