@@ -41,6 +41,7 @@ void print_string(va_list org)
 	if (i == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
 	printf("%s", i);
 
