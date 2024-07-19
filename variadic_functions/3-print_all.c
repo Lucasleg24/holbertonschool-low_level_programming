@@ -2,43 +2,58 @@
 
 /**
  * print_int - print an int
+ * @org: list of argument
  * Return: void
  */
 
-void print_int(void)
+void print_int(va_list org)
 {
-	printf("Print integer");
+	int i = va_arg(org, int);
+
+	printf("%d\n", i);
+
 }
 
 /**
  * print_char - print a char
+ * @org: list of argument
  * Return: void
  */
 
 void print_char(va_list org)
 {
-	char i = va_list(org, char);
-	printf("Print char");
+	char i = va_arg(org, char);
+
+	printf("%c\n", i);
+
 }
 
 /**
  *  print_string - print a string
+ *  @org: list of argument
  *  Return: void
  */
 
-void print_string(void)
+void print_string(va_list org)
 {
-	printf("Print string");
+	char *i = va_arg(org, char*);
+
+	printf("%s\n", i);
+
 }
 
 /**
  * print_float - print a float
+ * @org: list of argument
  * Return: void
  */
 
-void print_float(void)
+void print_float(va_list org)
 {
-	printf("Print float");
+	float i = va_arg(org, float);
+
+	printf("%f\n", i);
+
 }
 
 /**
