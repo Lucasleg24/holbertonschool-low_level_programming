@@ -22,9 +22,9 @@ void print_int(va_list org)
 
 void print_char(va_list org)
 {
-	char i = va_arg(org, char);
+	int i = va_arg(org, int);
 
-	printf("%c\n", i);
+	printf("%c\n", (char)i);
 
 }
 
@@ -50,9 +50,9 @@ void print_string(va_list org)
 
 void print_float(va_list org)
 {
-	float i = va_arg(org, float);
+	double i = va_arg(org, double);
 
-	printf("%f\n", i);
+	printf("%f\n", (float)i);
 
 }
 
