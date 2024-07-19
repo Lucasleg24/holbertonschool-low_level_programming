@@ -38,6 +38,10 @@ void print_string(va_list org)
 {
 	char *i = va_arg(org, char*);
 
+	if (i == NULL)
+	{
+		printf("(nil)");
+
 	printf("%s", i);
 
 }
@@ -79,18 +83,14 @@ void print_all(const char * const format, ...)
 	va_start(org, format);
 	while (format[o] != '\0')
 	{
-		if (format[o] == 'c' || format[o] == 'i' ||
-				format[o] == 'f' || format[o] == 's')
+		while (list[p].check != NULL)
 		{
-			while (list[p].check != NULL)
+			if (*(list[p].check) == format[o])
 			{
-				if (*(list[p].check) == format[o])
-				{
-					list[p].f(org);
-					printf(", ");
-				}
-				p++;
+				list[p].f(org);
+				printf(", ");
 			}
+			p++;
 		}
 		o++;
 		p = 0;
