@@ -10,7 +10,7 @@ void print_int(va_list org)
 {
 	int i = va_arg(org, int);
 
-	printf("%d\n", i);
+	printf("%d", i);
 
 }
 
@@ -24,7 +24,7 @@ void print_char(va_list org)
 {
 	int i = va_arg(org, int);
 
-	printf("%c\n", (char)i);
+	printf("%c", (char)i);
 
 }
 
@@ -38,7 +38,7 @@ void print_string(va_list org)
 {
 	char *i = va_arg(org, char*);
 
-	printf("%s\n", i);
+	printf("%s", i);
 
 }
 
@@ -52,7 +52,7 @@ void print_float(va_list org)
 {
 	double i = va_arg(org, double);
 
-	printf("%f\n", (float)i);
+	printf("%f", (float)i);
 
 }
 
@@ -87,11 +87,13 @@ void print_all(const char * const format, ...)
 				if (*(list[p].check) == format[o])
 				{
 					list[p].f(org);
+					printf(", ");
 				}
 				p++;
 			}
 		}
 		o++;
 	}
+	printf("\n");
 	va_end(org);
 }
