@@ -42,7 +42,6 @@ void print_string(va_list org)
 	{
 		printf("(nil)");
 	}
-
 	printf("%s", i);
 
 }
