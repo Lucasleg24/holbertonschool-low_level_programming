@@ -69,14 +69,14 @@ void print_all(const char * const format, ...)
 	va_list org;
 
 	formule list[] = {
-		{"c", print_char}
-		{"i", print_int}
-		{"s", print_string}
-		{"f", print_float}
+		{"c", print_char},
+		{"i", print_int},
+		{"s", print_string},
+		{"f", print_float},
 		{NULL, NULL}
 	};
 
-	va_start(org)
+	va_start(org, format);
 	while (format[o] != '\0')
 	{
 		if (format[o] == 'c' || format[o] == 'i' ||
