@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(org, format);
-	while (format[o] != '\0')
+	while (format != NULL && format[o] != '\0')
 	{
 		while (list[p].check != NULL)
 		{
