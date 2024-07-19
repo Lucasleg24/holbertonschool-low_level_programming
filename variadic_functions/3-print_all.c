@@ -84,7 +84,7 @@ void print_all(const char * const format, ...)
 		{
 			while (list[p].check != NULL)
 			{
-				if (list[p].check == format[o])
+				if (*(list[p].check) == format[o])
 				{
 					list[p].f(org);
 				}
