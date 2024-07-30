@@ -10,9 +10,9 @@
  */
 int main(void)
 {
-       	dlistint_t *head;
+	dlistint_t *head;
 	dlistint_t *node;
-	
+
 	head = NULL;
 	add_dnodeint_end(&head, 0);
 	add_dnodeint_end(&head, 1);
