@@ -4,12 +4,12 @@
  * error_check - function for print error
  * @code: code exit error
  * @message: message exit error
- * @filename: name of the file
+ * @file: name of the file
  */
 
-void error_exit(int code, const char *message, const char *filename)
+void error_exit(int code, const char *message, const char *file)
 {
-	dprintf(STDERR_FILENO, message, filename);
+	dprintf(STDERR_FILENO, message, file);
 	exit(code);
 }
 
