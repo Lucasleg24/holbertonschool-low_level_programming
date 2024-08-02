@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * error_check - function for print error
+ * error_exit - function for print error
  * @code: code exit error
  * @message: message exit error
  * @file: name of the file
