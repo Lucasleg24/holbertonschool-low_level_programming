@@ -37,6 +37,7 @@ int main(int argc, char **argv)
 	to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (to == -1)
 		error_exit(99, "Error: Can't write to %s\n", argv[2]);
+
 	while ((bread = read(from, buffer, 1024)) > 0)
 	{
 		if (write(to, buffer, bread) != bread)
